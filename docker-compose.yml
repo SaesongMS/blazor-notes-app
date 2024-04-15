@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+    ports:
+      - "27018:27018"
+    command: ["mongod", "--port", "27018"]
+  # backend:
+  #   build: ./backend
+  #   container_name: backend
+  #   ports:
+  #     - "5217:80"
+  #   depends_on:
+  #     - db
+  #   networks:
+  #     - app-network
